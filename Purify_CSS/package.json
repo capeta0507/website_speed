@@ -1,0 +1,12 @@
+{
+  "name": "Purify_CSS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "purifycss bootstrap.css index.html --min --out bootstrap.purify.css --info"
+  },
+  "keywords": [],
+  "author": "davidtpe",
+  "license": "ISC"
+}
