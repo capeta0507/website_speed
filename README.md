@@ -12,4 +12,4 @@
 
 ### 移除用不到的 CSS
 1. Purify CSS： [Github](https://github.com/purifycss/purifycss) / [教學](https://www.youtube.com/watch?v=06UsYjOezvc)
-
+2. 範例：[Github Purify_CSS](https://github.com/capeta0507/website_speed/tree/main/Purify_CSS)
