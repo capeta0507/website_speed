@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "purifycss bootstrap.css index.html --min --out bootstrap.purify.css --info"
+    "build-css": "purifycss bootstrap.css index.html index.js --min --out bootstrap.purify.css --info"
   },
   "keywords": [],
   "author": "davidtpe",
