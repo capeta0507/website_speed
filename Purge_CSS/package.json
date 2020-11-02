@@ -4,7 +4,8 @@
   "description": "要移除用不到的 CSS，有一套功能強大的工具，叫 PurgeCSS。",
   "main": "index.js",
   "scripts": {
-    "build-css": "purgecss --css bootstrap.min.css --content *.html *.js --output bootstrap.purge.css"
+    "build-css": "purgecss --css bootstrap.css --content *.html *.js --output bootstrap.purge.css",
+    "build-font": "purgecss --css font-awesome.css --content *.html *.js --output font-awesome.purge.css"
   },
   "keywords": [],
   "author": "davidtpe",
