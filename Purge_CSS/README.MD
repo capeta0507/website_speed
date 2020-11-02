@@ -15,7 +15,7 @@
 `npm install -g purgecss` 安裝全域程式。
 
 ### 範例
-[Github Purify_CSS](https://github.com/capeta0507/website_speed/tree/main/Purify_CSS)
+[Github Purge_CSS](https://github.com/capeta0507/website_speed/tree/main/Purge_CSS)
 
 建製所需要的工作目錄，進入該目錄。
 #### bootstrap
