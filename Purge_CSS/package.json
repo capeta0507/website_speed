@@ -1,0 +1,12 @@
+{
+  "name": "Purge_CSS",
+  "version": "1.0.0",
+  "description": "要移除用不到的 CSS，有一套功能強大的工具，叫 PurgeCSS。",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "purgecss --css bootstrap.min.css --content *.html *.js --output bootstrap.purge.css"
+  },
+  "keywords": [],
+  "author": "davidtpe",
+  "license": "ISC"
+}

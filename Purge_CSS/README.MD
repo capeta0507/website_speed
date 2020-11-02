@@ -49,7 +49,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "purgecss --css styles.css --content *.html *.js --out styles.purge.css"
+    "build-css": "purgecss --css bootstrap.min.css --content *.html *.js --output bootstrap.purge.css"
   },
   "keywords": [],
   "author": "davidtpe",
@@ -57,5 +57,5 @@
 }
 ```
 #### 執行 Purgecss 程序
-`npm run build-css`，系統會產生適合引用的 bootstrap.purge.css，檔案裡只留下 index.html 所引用的 Class name。
+`npm run build-css`，系統會產生適合引用的 bootstrap.purge.css，檔案裡只留下 index.html, index.js 所引用的 Class name。
 
