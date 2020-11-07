@@ -36,11 +36,12 @@ CSS 檔案的自行開發，或引用套件(Bootstrap, Materialize, Tailwind)等
 測試網址：https://backend-functions-8797f.web.app/
 本階段測試
 1. Purge CSS 壓縮 Bootstrap 所做的改變。
-程式碼：
-2. CSS 壓縮 + 圖檔大小的比較。
-程式碼：
-3. CSS 壓縮 + 圖檔位置比較。(Local or CDN)。
-程式碼：
+程式碼：[Github](https://github.com/capeta0507/website_speed/tree/main/WebSpeedTest/PurgeCSS)
+3. CSS 壓縮 + 圖檔大小的比較。
+程式碼：[Github](https://github.com/capeta0507/website_speed/tree/main/WebSpeedTest/Firebase)
+5. CSS 壓縮 + 圖檔位置比較。(Local or CDN)。
+程式碼：[Github](https://github.com/capeta0507/website_speed/tree/main/WebSpeedTest/Storage)
 
 可以看到測試比較。
+
 ![](https://i.imgur.com/aW5eCYm.png)
