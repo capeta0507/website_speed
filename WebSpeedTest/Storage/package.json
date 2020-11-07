@@ -1,0 +1,12 @@
+{
+  "name": "Firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "purgecss --css bootstrap.css --content *.html *.js --output bootstrap.purge.css"
+  },
+  "keywords": [],
+  "author": "davidtpe",
+  "license": "ISC"
+}

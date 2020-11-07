@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./bootstrap.css">
+</head> 
+<body>
+
+  <div class="jumbotron text-center">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p> 
+  </div>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 3</h3>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+
+    <form class="form-horizontal">
+      <fieldset>
+        <legend class="text-danger bg-light"><h2>Legend</h2></legend>
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+          <div class="col-lg-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 訂閱電子報
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" id="btnCancel" class="btn btn-default">取消</button>
+            <button type="submit" id="btnSubmit"  class="btn btn-primary">送出</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div id="formMessage" class="alert alert-secondary" role="alert">
+      填妥後請按 送出
+    </div>
+  </div>
+  <div class="container bg-light">
+    <h2 class="text-primary">Cup</h2>
+    <p class="text-secondary">咖啡、閱讀、花、心情</p>            
+    <img src="https://firebasestorage.googleapis.com/v0/b/backend-functions-8797f.appspot.com/o/images%2F1_Cup_O.jpg?alt=media&token=27bb3415-ca44-40cb-89b9-de7eb76a7f66" class="rounded" alt="1.Cup" width="70%" height=auto> 
+  </div>
+  <div class="container bg-light">
+    <h2 class="text-primary">Coffee</h2>
+    <p class="text-secondary">咖啡、朋友、談心、輕鬆</p>            
+    <img src="https://firebasestorage.googleapis.com/v0/b/backend-functions-8797f.appspot.com/o/images%2F2_Cup_O.jpg?alt=media&token=c0f01f9c-e48c-48ba-bc6e-d7975ccd5444" class="rounded" alt="2.Coffee" width="70%" height=auto> 
+  </div>
+  <div class="container bg-light">
+    <h2 class="text-primary">老鷹</h2>
+    <p class="text-secondary">美麗、英勇、翱翔、天地</p>            
+    <img src="https://firebasestorage.googleapis.com/v0/b/backend-functions-8797f.appspot.com/o/images%2F3_Eagle_O.jpg?alt=media&token=67cb8ae8-4c5a-4a17-bc00-a4869a96b1ee" class="rounded" alt="3.Ealge" width="70%" height=auto> 
+  </div>
+  <div class="container bg-light">
+    <h2 class="text-primary">海魚</h2>
+    <p class="text-secondary">優游、美麗、大海、珊瑚</p>            
+    <img src="https://firebasestorage.googleapis.com/v0/b/backend-functions-8797f.appspot.com/o/images%2F4_Fish_O.jpg?alt=media&token=5e693452-72bc-4837-b2d4-2d59bbb8ae22" class="rounded" alt="4.Fish" width="70%" height=auto> 
+  </div>
+  <br/>
+  <div class="alert alert-success">
+    <strong>Success!</strong> 網頁 Footer ...
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
