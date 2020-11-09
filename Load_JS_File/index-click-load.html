@@ -13,34 +13,50 @@
   </div>
   <hr/>
   <div id="loadContainer" class="container">
-    <button type="button" class="btn btn-dark" onclick="myLoadJQuery()">Load jQuery</button>
+    <p>按 <strong class="text-warning bg-dark">"Load jQuery"</strong> 按鈕，程式才下載 jquery-3.5.1.js 下來。</p>
+    <button type="button" class="btn btn-dark text-warning" onclick="myLoadJQuery()">Load jQuery</button>
+    <button id="jQBtn" type="button" class="btn bg-warning text-danger" disabled>CLICK ME</button>
   </div>
   
   <script>
-    var jQLoad = false;
+    var jQLoad = false;  // jQuery 不要重複載入 jQload = false -> 可以載入 -> jQload = true
+    // Try it 按鈕，自動產生一個新的 CLICK ME 按鈕，並監聽 click 事件。
     function myFunction() {
-      var myContainer = document.getElementById("mainContainer");
-      var btn = document.createElement("button");
+      var myContainer = document.getElementById("mainContainer"); //定義 mainContainer
+      var btn = document.createElement("button");  // 建立 button Element
       btn.setAttribute("type","button");
-      btn.classList.add("btn","btn-success");
-      btn.innerHTML = "CLICK ME";
-      btn.id = "myBtn"
-      myContainer.appendChild(btn);
+      btn.classList.add("btn","btn-success");      // 增加 Class name
+      btn.innerHTML = "CLICK ME";                  // 文字 CLICK ME
+      btn.id = "myBtn";                            // id name
+      myContainer.appendChild(btn);                // 將 button 加到　mainContainer 下面
       btn.addEventListener("click",()=>{alert('Hello')})
     }
 
+    // Load jQuery 按鈕，下載 jQuery.js，下載完成之後就可以執行 jQuery 所需的指令，並且避免多次下載 jQuery
     function myLoadJQuery(){
-      if (jQLoad == false) {
-        var jQFile = document.createElement('script');
+      if (jQLoad == false) {  // 沒下載過才處理本段落
+        var jQFile = document.createElement('script');      // 建立 script Element
         // jQFile.type = "text/javascript";
         jQFile.setAttribute("type","text/javascript");
         // jQFile.src = "./js/jquery-3.5.1.js"
-        jQFile.setAttribute("src","./js/jquery-3.5.1.js");
-        document.body.appendChild(jQFile);
+        jQFile.setAttribute("src","./js/jquery-3.5.1.js");  // src
+        jQFile.addEventListener('load',()=>{                // script addEventListener 'load' 完成才處理
+          console.log('jQuery 下載完成...');
+          // jQuery 下載完成才加入以 jQuery 執行的 Button 指令。
+          var myJQBtn = $('#jQBtn');                     // jQBtn
+          myJQBtn.attr('disabled',false);                // Enable
+          myJQBtn.click(myJQueryHi);                     // Click -> myJQueryHi()
+        })
+        console.log('jQuery append ...');                    
+        document.body.appendChild(jQFile);                   // jQFile 加到　body 下面
         jQLoad = true;
       } else {
         console.log('jQuery 不須重複載入...');
       }
+    }
+    // 載入 jQuery 之後 CLICK ME 按鈕的執行程式
+    function myJQueryHi(){
+      alert('Hi jQuery ...');
     }
   </script>
   

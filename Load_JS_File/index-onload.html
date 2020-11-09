@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動態加入</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+  <div id="mainContainer" class="container">
+    <p>Click the <strong>"CLICK ME"</strong> Button.</p>
+  </div>
+  
+  <script>
+    var jQLoad = false;  // jQuery 不要重複載入 jQload = false -> 可以載入 -> jQload = true
+    window.onload = () =>{
+      var myContainer = document.getElementById("mainContainer"); //定義 mainContainer
+      var btn = document.createElement("button");  // 建立 button Element
+      btn.setAttribute("type","button");
+      btn.classList.add("btn","btn-success");      // 增加 Class name
+      btn.innerHTML = "CLICK ME";                  // 文字 CLICK ME
+      btn.id = "myBtn";
+      myContainer.appendChild(btn);                // 將 button 加到　mainContainer 下面
+      console.log("Button ... 產生")
+      // btn.addEventListener("click",()=>{alert('Hello')});
+      if (jQLoad == false){
+        var jQFile = document.createElement('script');      // 建立 script Element
+        jQFile.setAttribute("type","text/javascript");
+        jQFile.setAttribute("src","./js/jquery-3.5.1.js");  // src
+        jQFile.addEventListener('load',()=>{
+          console.log('jQuery 下載完成...');
+          var myJQBtn = $('#myBtn');
+          myJQBtn.click(myJQueryHi);
+        })
+        console.log('jQuery append ...');                    
+        document.body.appendChild(jQFile);                   // jQFile 加到　body 下面
+        jQLoad = true;
+      } else{
+        console.log('jQuery 不須重複載入...');
+      }
+    }
+
+    // 載入 jQuery 之後 CLICK ME 按鈕的執行程式
+    function myJQueryHi(){
+      alert('Hi jQuery ...');
+    }
+
+  </script>
+  
+</body>
+</html>

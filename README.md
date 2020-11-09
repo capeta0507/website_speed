@@ -41,7 +41,3 @@ CSS 檔案的自行開發，或引用套件(Bootstrap, Materialize, Tailwind)等
 程式碼：[Github](https://github.com/capeta0507/website_speed/tree/main/WebSpeedTest/Firebase)
 5. CSS 壓縮 + 圖檔位置比較。(Local or CDN)。
 程式碼：[Github](https://github.com/capeta0507/website_speed/tree/main/WebSpeedTest/Storage)
-
-可以看到測試比較。
-
-![](https://i.imgur.com/aW5eCYm.png)
