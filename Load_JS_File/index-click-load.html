@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動態加入</title>
+  <link rel="stylesheet" href="./css/bootstrap.purge.css">
+</head>
+<body>
+  <div id="mainContainer" class="container">
+    <p>Click the <strong class="text-primary">"Try it button"</strong> to make a BUTTON element with <strong class="text-danger">"CLICK ME"</strong> text.</p>
+    <button type="button" class="btn btn-primary" onclick="myFunction()">Try it</button>
+  </div>
+  <hr/>
+  <div id="loadContainer" class="container">
+    <button type="button" class="btn btn-dark" onclick="myLoadJQuery()">Load jQuery</button>
+  </div>
+  
+  <script>
+    var jQLoad = false;
+    function myFunction() {
+      var myContainer = document.getElementById("mainContainer");
+      var btn = document.createElement("button");
+      btn.setAttribute("type","button");
+      btn.classList.add("btn","btn-success");
+      btn.innerHTML = "CLICK ME";
+      btn.id = "myBtn"
+      myContainer.appendChild(btn);
+      btn.addEventListener("click",()=>{alert('Hello')})
+    }
+
+    function myLoadJQuery(){
+      if (jQLoad == false) {
+        var jQFile = document.createElement('script');
+        // jQFile.type = "text/javascript";
+        jQFile.setAttribute("type","text/javascript");
+        // jQFile.src = "./js/jquery-3.5.1.js"
+        jQFile.setAttribute("src","./js/jquery-3.5.1.js");
+        document.body.appendChild(jQFile);
+        jQLoad = true;
+      } else {
+        console.log('jQuery 不須重複載入...');
+      }
+    }
+  </script>
+  
+</body>
+</html>

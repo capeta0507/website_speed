@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動態加入</title>
+</head>
+<body>
+  <p>Click the <strong>"Try it button"</strong> to make a BUTTON element with <strong>"CLICK ME"</strong> text.</p>
+  <button onclick="myFunction()">Try it</button>
+
+  <script>
+    function myFunction() {
+      var btn = document.createElement("BUTTON");
+      btn.setAttribute("type","button");
+      btn.innerHTML = "CLICK ME";
+      btn.id = "myBtn"
+      document.body.appendChild(btn);
+      btn.addEventListener("click",()=>{alert('Hello')})
+    }
+  </script>
+  
+</body>
+</html>
