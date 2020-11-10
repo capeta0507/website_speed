@@ -10,15 +10,16 @@
   <button onclick="myFunction()">Try it</button>
 
   <script>
+    // Try it 按鈕所執行的程式
     function myFunction() {
-      var btn = document.createElement("BUTTON");
+      var btn = document.createElement("button");         // 建立 button Element
       btn.setAttribute("type","button");
-      btn.innerHTML = "CLICK ME";
-      btn.id = "myBtn"
-      document.body.appendChild(btn);
-      btn.addEventListener("click",()=>{alert('Hello')})
+      btn.innerHTML = "CLICK ME";                         // 文字 CLICK ME
+      btn.id = "myBtn"                                    // id = myBtn
+      document.body.appendChild(btn);                     // 將 button 加到 body 下面
+      btn.addEventListener("click",()=>{alert('Hello')})  // btn.addEventListener("click",()=>{alert('Hello')});
     }
   </script>
-  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/jquery-3.5.1.js"></script>            // 引進 jQuery.js
 </body>
 </html>
